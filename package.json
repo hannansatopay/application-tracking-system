@@ -1,17 +1,32 @@
 {
-	"name": "application-tracking-system",
-	"version": "0.0.1",
-	"private": true,
-	"scripts": {
-		"dev": "vite dev",
-		"build": "vite build",
-		"preview": "vite preview"
-	},
-	"devDependencies": {
-		"@sveltejs/adapter-auto": "^2.0.0",
-		"@sveltejs/kit": "^1.20.4",
-		"svelte": "^4.0.5",
-		"vite": "^4.4.2"
-	},
-	"type": "module"
+  "name": "application-tracking-system",
+  "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "@sveltejs/adapter-auto": "^2.0.0",
+    "@sveltejs/kit": "^1.20.4",
+    "svelte": "^4.0.5",
+    "vite": "^4.4.2"
+  },
+  "type": "module",
+  "description": "Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).",
+  "main": "svelte.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mansi209aps/application-tracking-system.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mansi209aps/application-tracking-system/issues"
+  },
+  "homepage": "https://github.com/Mansi209aps/application-tracking-system#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
