@@ -1,19 +1,17 @@
+require("dotenv").config();;
 const express = require("express");
-const bodyParser = require("body-parser");
+// const bodyParser = require("body-parser");
 
-const dotenv = require("dotenv");
-
-dotenv.config();
+const recruiterRouter = require("./routes/recruiter.router"); 
+const errorHandler = require("./middleWare/error");
 
 const app = express();
 
-app.use(bodyParser.json());
+// app.use(bodyParser.json()); // no need to use this
+app.use(express.json());
 
-
-app.post('/api/endpoint', (req, res) => {
-    console.log(req.body);
-    res.send('Data received');
-});
+app.use("/api/v1/recruiter/auth", recruiterRouter)
+app.use(errorHandler)
 
 // APIs endpoint
 
