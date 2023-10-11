@@ -3,5 +3,6 @@
   import Navbar from "../shared/Navbar.svelte";
 </script>
 
+<!-- <Navbar /> -->
 <!-- <Footer /> -->
-<!-- Fetch this common component in the webpages -->
+<!-- Fetch this common components in the webpages -->
