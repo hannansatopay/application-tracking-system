@@ -7,8 +7,8 @@
 </script>
 
 <!-- <Home /> -->
-<SignUp />
-<!-- <JobPost /> -->
+<!-- <SignUp /> -->
+<JobPost />
 <!-- <Navbar /> -->
 <!-- <Footer /> -->
 <!-- Fetch this common components in the webpages -->

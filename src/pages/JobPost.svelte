@@ -22,7 +22,7 @@
 <Navbar />
 
 <section
-    class="max-w-4xl p-6 mx-auto bg-indigo-600 rounded-md shadow-md dark:bg-gray-800 my-20"
+    class="max-w-4xl p-6 mx-auto bg-gray-800 rounded-md shadow-md dark:bg-gray-800 my-20"
 >
     <h1 class="text-xl font-bold text-white capitalize dark:text-white">
         Account settings
