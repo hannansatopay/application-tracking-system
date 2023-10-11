@@ -11,8 +11,19 @@ datasource db {
 }
 
 model Recruiter {
-  id       Int      @id @default(autoincrement())
-  username String   @unique
-  password String
-  createdAt DateTime @default(now())
+  org_id         Int     @id @default(autoincrement()) @map("org_id")
+  first_name     String  @db.VarChar(255)
+  last_name      String  @db.VarChar(255)
+  description    String? @db.Text
+  location       String? @db.VarChar(255)
+  website        String? @db.VarChar(255)
+  Email_verified String? @unique @db.VarChar(255)
+  Password    String?   @db.VarChar(255)
+  Email_Hash  String?   @db.VarChar(255)
+  Logo        Bytes?    @db.Blob
+  Country     String?   @db.VarChar(255)
+  Date_joined DateTime? @db.Timestamp
+  Last_join   DateTime? @db.Timestamp
+  user_ip     String?   @db.VarChar(255)
+  user_agent  String?   @db.VarChar(255)
 }
