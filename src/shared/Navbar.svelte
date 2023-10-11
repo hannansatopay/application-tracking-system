@@ -6,7 +6,7 @@
     }
 </script>
 
-<div class="bg-gray-900">
+<div class="bg-blue-900">
     <div
         class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
     >
@@ -33,9 +33,9 @@
                 <li>
                     <a
                         href="/"
-                        aria-label="Our product"
-                        title="Our product"
-                        class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                        aria-label="Home"
+                        title="Home"
+                        class="font-medium tracking-wide text-white transition-colors duration-200 hover:text-blue-400"
                     >
                         Home
                     </a>
@@ -43,9 +43,9 @@
                 <li>
                     <a
                         href="/"
-                        aria-label="Our product"
-                        title="Our product"
-                        class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                        aria-label="About Us"
+                        title="About Us"
+                        class="font-medium tracking-wide text-white transition-colors duration-200 hover:text-blue-400"
                     >
                         About Us
                     </a>
@@ -53,9 +53,9 @@
                 <li>
                     <a
                         href="/"
-                        aria-label="Product pricing"
-                        title="Product pricing"
-                        class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                        aria-label="Jobs"
+                        title="Jobs"
+                        class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-blue-400"
                     >
                         Jobs
                     </a>
@@ -63,9 +63,9 @@
                 <li>
                     <a
                         href="/"
-                        aria-label="About us"
-                        title="About us"
-                        class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-teal-accent-400"
+                        aria-label="Contact us"
+                        title="Contact us"
+                        class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-blue-400"
                     >
                         Contact us
                     </a>
@@ -75,7 +75,7 @@
                 <li>
                     <a
                         href="/"
-                        class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                        class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md text-white bg-blue-500 hover:bg-white hover:text-blue-800 hover:border-4 border-blue-600 focus:shadow-outline focus:outline-none"
                         aria-label="Recruiter"
                         title="Recruiter"
                     >
@@ -85,7 +85,7 @@
                 <li>
                     <a
                         href="/"
-                        class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                        class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md text-white bg-blue-500 hover:bg-white hover:text-blue-800 hover:border-4 border-blue-600 focus:shadow-outline focus:outline-none"
                         aria-label="Applicant"
                         title="Applicant"
                     >
@@ -208,7 +208,7 @@
                                             href="/"
                                             aria-label="Product pricing"
                                             title="Product pricing"
-                                            class="font-medium tracking-wide text-gray-700 transition-colors duration-200 hover:text-deep-purple-accent-400"
+                                            class="font-medium tracking-wide text-white transition-colors duration-200 hover:blue-400"
                                         >
                                             Jobs
                                         </a>
@@ -226,7 +226,7 @@
                                     <li>
                                         <a
                                             href="/"
-                                            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover-bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                            class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md text-white bg-blue-700 hover:bg-white hover:text-blue-800 hover:border-4 border-blue-600 focus:shadow-outline focus:outline-none"
                                             aria-label="Recruiter"
                                             title="Recruiter"
                                         >
@@ -236,7 +236,7 @@
                                     <li>
                                         <a
                                             href="/"
-                                            class="inline-flex items-center justify-center w-full h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover-bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                                            class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md text-white bg-blue-700 hover:bg-white hover:text-blue-800 hover:border-4 border-blue-600 focus:shadow-outline focus:outline-none"
                                             aria-label="Applicant"
                                             title="Applicant"
                                         >

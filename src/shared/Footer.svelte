@@ -1,4 +1,4 @@
-<div class="bg-gray-900">
+<div class="bg-blue-900">
   <div
     class="px-4 pt-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
   >
@@ -184,7 +184,7 @@
           />
           <button
             type="submit"
-            class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+            class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md text-white bg-blue-700 hover:bg-white hover:text-blue-800 hover:border-4 border-blue-600 focus:shadow-outline focus:outline-none"
           >
             Subscribe
           </button>
