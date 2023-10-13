@@ -190,7 +190,7 @@
           </button>
         </form>
         <p class="mt-4 text-sm text-white">
-          New Growth to Your Carrer...
+          New Growth to Your Carrier...
           <!-- An Application Tracking System facilitating seamless job applications
           for jobseekers and job postings for recruiters, streamlining talent
           acquisition for organizations. -->
