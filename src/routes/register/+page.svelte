@@ -1,6 +1,6 @@
 <script>
-    import Footer from "../shared/Footer.svelte";
-    import Navbar from "../shared/Navbar.svelte";
+    import Footer from "../../shared/Footer.svelte";
+    import Navbar from "../../shared/Navbar.svelte";
     let imageSrc =
         "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600";
 </script>
@@ -114,10 +114,12 @@
                     </div>
                     <div class="flex -mx-3">
                         <div class="w-full px-3 mb-5">
-                            <button
-                                class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold"
-                                >REGISTER NOW</button
-                            >
+                            <a href="/register/jobpost">
+                                <button
+                                    class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold"
+                                    >REGISTER NOW</button
+                                >
+                            </a>
                         </div>
                     </div>
                     <p class="text-center text-sm text-gray-500">

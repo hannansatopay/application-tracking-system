@@ -189,9 +189,11 @@
             Subscribe
           </button>
         </form>
-        <p class="mt-4 text-sm text-gray-500">
-          Bacon ipsum dolor amet short ribs pig sausage prosciuto chicken spare
-          ribs salami.
+        <p class="mt-4 text-sm text-white">
+          New Growth to Your Carrer...
+          <!-- An Application Tracking System facilitating seamless job applications
+          for jobseekers and job postings for recruiters, streamlining talent
+          acquisition for organizations. -->
         </p>
       </div>
     </div>
@@ -199,7 +201,7 @@
       class="flex flex-col justify-between pt-5 pb-10 border-t border-gray-800 sm:flex-row"
     >
       <p class="text-sm text-gray-500">
-        © Copyright 2020 Lorem Inc. All rights reserved.
+        © Copyright 2023 ATS Inc. All rights reserved.
       </p>
       <div class="flex items-center mt-4 space-x-4 sm:mt-0">
         <a
