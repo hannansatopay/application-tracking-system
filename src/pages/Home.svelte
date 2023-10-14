@@ -69,7 +69,7 @@
                     <a
                         href="/"
                         aria-label=""
-                        class="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-teal-accent-400 hover:text-teal-accent-700"
+                        class="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-white hover:text-deep-purple-accent-400"
                     >
                         Jobs
                         <svg
@@ -88,7 +88,7 @@
     </div>
 </div>
 
-<div class="text-center py-6 text-4xl font-semibold">JOBS</div>
+<div class="text-center text-blue-900 py-6 text-4xl font-semibold">JOBS</div>
 
 <!-- CARD -->
 <div
@@ -123,7 +123,7 @@
     <a
         href="/"
         aria-label=""
-        class="inline-flex items-center font-semibold transition-colors duration-200 text-deep-purple-accent-400 hover:text-deep-purple-800"
+        class="inline-flex items-center font-semibold transition-colors duration-200 text-blue-900 hover:deep-purple-accent-400"
     >
         View more jobs
         <svg

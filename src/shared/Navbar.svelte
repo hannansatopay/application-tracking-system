@@ -74,7 +74,7 @@
             <ul class="flex items-center hidden space-x-8 lg:flex">
                 <li>
                     <a
-                        href="/"
+                        href="/register"
                         class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md text-white bg-blue-500 hover:bg-white hover:text-blue-800 hover:border-4 border-blue-600 focus:shadow-outline focus:outline-none"
                         aria-label="Recruiter"
                         title="Recruiter"
