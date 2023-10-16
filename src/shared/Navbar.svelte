@@ -8,25 +8,30 @@
 
 <div class="bg-blue-900">
     <div
-        class="px-4 py-5 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
+        class="px-4 py-3 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8"
     >
         <div class="relative flex items-center justify-between">
             <a
                 href="/"
-                aria-label="Company"
-                title="Company"
+                aria-label="ATS"
+                title="ATS"
                 class="inline-flex items-center"
             >
-                <svg class="w-8 text-teal-accent-400" viewBox="0 0 24 24">
+                <!-- <svg class="w-8 text-teal-accent-400" viewBox="0 0 24 24">
                     <rect x="3" y="1" width="7" height="12" />
                     <rect x="3" y="17" width="7" height="6" />
                     <rect x="14" y="1" width="7" height="6" />
                     <rect x="14" y="11" width="7" height="12" />
-                </svg>
+                </svg> -->
+                <img
+                    src="/src/Image/img.png"
+                    alt="Logo"
+                    class="w-1/6 h-1/6 rounded-full"
+                />
                 <span
                     class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase"
                 >
-                    Company
+                    ATS
                 </span>
             </a>
             <ul class="flex items-center hidden space-x-8 lg:flex">

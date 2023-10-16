@@ -1,6 +1,6 @@
 <script>
-    import Footer from "../../../shared/Footer.svelte";
-    import Navbar from "../../../shared/Navbar.svelte";
+    import Footer from "../../shared/Footer.svelte";
+    import Navbar from "../../shared/Navbar.svelte";
 
     let username = "";
     let emailAddress = "";

@@ -2,7 +2,7 @@
     import Footer from "../../shared/Footer.svelte";
     import Navbar from "../../shared/Navbar.svelte";
     let imageSrc =
-        "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=600";
+        "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600";
 </script>
 
 <!-- Navbar -->
@@ -26,11 +26,11 @@
             <!-- </div> -->
             <div class="w-full md:w-1/2 py-10 px-5 md:px-10">
                 <div class="text-center mb-10">
-                    <h1 class="font-bold text-3xl text-gray-900">SIGN UP</h1>
-                    <p>Enter your credentials to sign up</p>
+                    <h1 class="font-bold text-3xl text-gray-900">LOGIN</h1>
+                    <p>Enter your credentials to login</p>
                 </div>
                 <div>
-                    <div class="flex -mx-3">
+                    <!-- <div class="flex -mx-3">
                         <div class="w-1/2 px-3 mb-5">
                             <label for="" class="text-xs font-semibold px-1"
                                 >First name</label
@@ -68,8 +68,8 @@
                                     placeholder="Smith"
                                 />
                             </div>
-                        </div>
-                    </div>
+                        </div> -->
+                    <!-- </div> -->
                     <div class="flex -mx-3">
                         <div class="w-full px-3 mb-5">
                             <label for="" class="text-xs font-semibold px-1"
@@ -117,18 +117,18 @@
                             <a href="/jobpost">
                                 <button
                                     class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold"
-                                    >SIGN UP</button
+                                    >LOGIN</button
                                 >
                             </a>
                         </div>
                     </div>
                     <p class="text-center text-sm text-gray-500">
-                        Already a member?{" "}
+                        Not a member?{" "}
                         <a
-                            href="/login"
+                            href="/register"
                             class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
                         >
-                            Login
+                            Signup
                         </a>
                     </p>
                 </div>
