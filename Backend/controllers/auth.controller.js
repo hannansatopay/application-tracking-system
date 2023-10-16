@@ -4,55 +4,36 @@ const asyncHandler = require("../middleWare/async");
 const prisma = require("../utils/prisma");
 const ErrorResponse = require("../utils/ErrorResponse");
 
-const sendToken = (user, statusCode, res) => {
-  const token = jwt.sign({ id: user.id }, process.env.JWT_SECRET, {
-    expiresIn: process.env.JWT_EXPIRE,
-  });
-
-  const secure = process.env.NODE_ENV == "production" ? true : false;
-  const options = {
-    expires: new Date(
-      Date.now() + process.env.JWT_COOKIE_EXPIRE * 24 * 60 * 60 * 1000
-    ),
-    httpOnly: true,
-    secure,
-  };
-
-  res
-    .status(statusCode)
-    .cookie("token", token, options)
-    .json({ success: true, token });
-};
-
 // @desc    Register a user
 // @route   POST api/v1/recruiter/auth/register
 // @access  Public
 exports.register = asyncHandler(async (req, res, next) => {
-  const { first_name, last_name, Email_verified, Password } = req.body;
+  const { first_name, last_name, email_verified, password } = req.body;
   const requiredFields = [
     "first_name",
     "last_name",
-    "Email_verified",
-    "Password",
+    "email_verified",
+    "password",
   ];
+  
   const emptyFields = requiredFields.filter((field) => !req.body[field]);
   if (emptyFields.length > 0) {
     return next(new ErrorResponse(400, `Missing ${emptyFields.join(", ")}`));
   }
 
-  const hashedPassword = await bcrypt.hash(Password, 10);
+  const hashedPassword = await bcrypt.hash(password, 10);
 
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const passwordRegex =
     /^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z\d!@#$%^&*]{8,}$/;
 
-  if (!emailRegex.test(Email_verified)) {
+  if (!emailRegex.test(email_verified)) {
     return next(
-      new ErrorResponse(400, `${Email_verified} is an invalid email`)
+      new ErrorResponse(400, `${email_verified} is an invalid email`)
     );
   }
 
-  if (!passwordRegex.test(Password)) {
+  if (!passwordRegex.test(password)) {
     return next(
       new ErrorResponse(
         400,
@@ -61,43 +42,48 @@ exports.register = asyncHandler(async (req, res, next) => {
     );
   }
 
-  const user = await prisma.recruiter.findUnique({
+  const recruiter = await prisma.recruiter.findUnique({
     where: {
-      Email_verified,
+      email_verified,
     },
   });
 
-  if (user) {
+  if (recruiter) {
     return next(new ErrorResponse(400, `Email already exists`));
   }
 
   await prisma.recruiter.create({
-    data: { first_name, last_name, Email_verified, Password: hashedPassword },
+    data: { first_name, last_name, email_verified, password: hashedPassword },
   });
+
   return res
     .status(201)
-    .json({ success: true, message: "User created successfully" });
+    .json({ success: true, message: "Recruiter registered successfully" });
 });
 
 // @desc    Login user
 // @route   POST api/v1/auth/login
 // @access  Public
 exports.login = asyncHandler(async (req, res, next) => {
-  const { Email_verified, Password } = req.body;
+  const { email_verified, password } = req.body;
 
-  if (!Email_verified || !Password) {
+  if (!email_verified || !password) {
     return next(new ErrorResponse(400, "Please enter email and password"));
   }
 
-  const user = await prisma.recruiter.findUnique({
+  const recruiter = await prisma.recruiter.findUnique({
     where: {
-      Email_verified,
+      email_verified,
     },
   });
 
-  if (!user || !(await bcrypt.compare(Password, user.Password))) {
+  if (!recruiter || !(await bcrypt.compare(password, recruiter.password))) {
     return next(new ErrorResponse(401, "Invalid Credentials"));
   }
 
-  sendToken(user, 200, res);
+  const token = jwt.sign({ id: recruiter.org_id }, process.env.JWT_SECRET, {
+    expiresIn: process.env.JWT_EXPIRE,
+  });
+
+  res.status(200).json({ success: true, token });
 });
