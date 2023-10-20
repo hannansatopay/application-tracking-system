@@ -7,7 +7,7 @@ generator client {
 
 datasource db {
   provider = "mysql"
-  url      = env("DATABASE_URL")
+  url      = "mysql://application-tracking-system-dev:M10y&2o6r@ls-141ff2a6703085fbd1b645a016f671471e83ed44.c4132jfwzbkh.ap-south-1.rds.amazonaws.com:3306/application-tracking-system-dev"
 }
 
 model Recruiter {

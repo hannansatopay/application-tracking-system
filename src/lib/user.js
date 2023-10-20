@@ -1,11 +1,11 @@
-import db from "./db.js";
+import db from "../../prisma/db";
 import bcrypt from "bcryptjs";
 import jwt from "jsonwebtoken";
 
 let JWT_ACCESS_SECRET = "tA7sSb#^aBxT1r0LDaCOwasNF8MeVtcTb@HrnxiEJ5UVy!6v%o";
 
 function createJWT(user) {
-  return  jwt.sign({id: user.id, email: user.email}, JWT_ACCESS_SECRET, {
+  return jwt.sign({ id: user.id, email: user.email }, JWT_ACCESS_SECRET, {
     expiresIn: '1d'
   });
 }
@@ -23,7 +23,7 @@ export async function loginUser(email, password) {
     });
 
     if (!user) {
-      return {error: 'User not found'};
+      return { error: 'User not found' };
     }
 
     const valid = await bcrypt.compare(password, user.password);
@@ -31,7 +31,7 @@ export async function loginUser(email, password) {
     // const valid = true;
 
     if (!valid) {
-      return {error: 'Invalid password'};
+      return { error: 'Invalid password' };
     }
 
     // Update last_login in database
@@ -46,7 +46,7 @@ export async function loginUser(email, password) {
 
     const token = createJWT(user);
 
-    return {token};
+    return { token };
   } catch (error) {
     console.log(error);
     return error;

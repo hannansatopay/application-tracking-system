@@ -12,6 +12,7 @@
     "@sveltejs/kit": "^1.20.4",
     "autoprefixer": "^10.4.16",
     "postcss": "^8.4.31",
+    "prisma": "^5.4.2",
     "svelte": "^4.0.5",
     "tailwindcss": "^3.3.3",
     "vite": "^4.4.2"
@@ -30,8 +31,11 @@
   },
   "homepage": "https://github.com/Mansi209aps/application-tracking-system#readme",
   "dependencies": {
+    "@prisma/client": "^5.4.2",
+    "bcryptjs": "^2.4.3",
     "express": "^4.18.2",
     "flowbite-svelte": "^0.44.18",
+    "jsonwebtoken": "^9.0.2",
     "svelte-spa-router": "^3.3.0"
   }
 }
