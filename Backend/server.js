@@ -20,5 +20,5 @@ const port = process.env.PORT || 5000;
 
 // listen
 app.listen(port, () => {
-  console.log("ATS -> Server is listining on port " + port);
+  console.log("HireLogix -> Server is listining on port " + port);
 });
