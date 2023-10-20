@@ -6,7 +6,7 @@
       <div
         class="grid grid-cols-2 gap-5 row-gap-8 lg:col-span-4 md:grid-cols-2"
       >
-        <div>
+        <div id="about">
           <p class="font-medium tracking-wide text-white">About Us</p>
           <br />
           <p class="text-gray-300">
@@ -14,87 +14,9 @@
             applications for jobseekers and job postings for recruiters,
             streamlining talent acquisition for organizations.
           </p>
-          <!-- <ul class="mt-2 space-y-2">
-            <li>
-              <a
-                href="/"
-                class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
-              >
-                News
-              </a>
-            </li>
-            <li>
-              <a
-                href="/"
-                class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
-              >
-                World
-              </a>
-            </li>
-            <li>
-              <a
-                href="/"
-                class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
-              >
-                Games
-              </a>
-            </li>
-            <li>
-              <a
-                href="/"
-                class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
-              >
-                References
-              </a>
-            </li>
-          </ul> -->
         </div>
-        <!-- <div> -->
-        <!-- <p class="font-medium tracking-wide text-gray-300">Apples</p>
-          <ul class="mt-2 space-y-2">
-            <li>
-              <a
-                href="/"
-                class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
-              >
-                Web
-              </a>
-            </li>
-            <li>
-              <a
-                href="/"
-                class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
-              >
-                eCommerce
-              </a>
-            </li>
-            <li>
-              <a
-                href="/"
-                class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
-              >
-                Business
-              </a>
-            </li>
-            <li>
-              <a
-                href="/"
-                class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
-              >
-                Entertainment
-              </a>
-            </li>
-            <li>
-              <a
-                href="/"
-                class="text-gray-500 transition-colors duration-300 hover:text-deep-purple-accent-200"
-              >
-                Portfolio
-              </a>
-            </li>
-          </ul>
-        </div> -->
-        <div>
+
+        <div id="contact">
           <p class="font-medium tracking-wide text-gray-300">Contact Us</p>
           <br />
           <div class="text-gray-300">Phone : +91 1102045736</div>
