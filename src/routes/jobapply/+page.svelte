@@ -1,6 +1,7 @@
 <script>
     import Footer from "../../shared/Footer.svelte";
     import Navbar from "../../shared/Navbar.svelte";
+    import Modal from "../../pages/Modal.svelte";
 
     let file = null;
 
@@ -18,6 +19,13 @@
 
     function handleSubmit() {
         // Handle form submission logic here
+    }
+
+    // FUNCTION TO HANDEL MODAL
+    let isOpen = false;
+
+    function openModal() {
+        isOpen = true;
     }
 </script>
 
@@ -170,7 +178,7 @@
             <div class="flex justify-end mt-6">
                 <button
                     class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold"
-                    >APPLY</button
+                    on:click={openModal}>APPLY</button
                 >
             </div>
         </div>
@@ -179,6 +187,8 @@
 
 <!-- FOOTER -->
 <Footer />
+
+<Modal {isOpen} />
 
 <style>
     @import url("https://cdnjs.cloudflare.com/ajax/libs/MaterialDesign-Webfont/5.3.45/css/materialdesignicons.min.css");

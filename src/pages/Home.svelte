@@ -59,7 +59,6 @@
                         We keep moving forward, opening new doors, and doing new
                         things, because we’re curious and curiosity keeps
                         leading us down new paths.
-                        <!-- <span class="text-teal-accent-400">lazy dog</span> -->
                     </h2>
                     <p
                         class="max-w-xl mb-4 text-base text-gray-400 md:text-lg text-right"
@@ -67,7 +66,7 @@
                         – Walt Disney
                     </p>
                     <a
-                        href="/"
+                        href="/jobs"
                         aria-label=""
                         class="inline-flex items-center font-semibold tracking-wider transition-colors duration-200 text-white hover:text-deep-purple-accent-400"
                     >
@@ -121,7 +120,7 @@
 
 <div class="text-center mb-8">
     <a
-        href="/"
+        href="/jobs"
         aria-label=""
         class="inline-flex items-center font-semibold transition-colors duration-200 text-blue-900 hover:deep-purple-accent-400"
     >

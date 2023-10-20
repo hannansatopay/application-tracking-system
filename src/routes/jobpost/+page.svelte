@@ -155,11 +155,13 @@
             </div>
 
             <!-- POST JOB -->
-            <div class="flex justify-end mt-6">
-                <button
-                    class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold"
-                    >POST JOB</button
-                >
+            <div class="flex justify-center mt-6">
+                <a href="/" class="block w-full">
+                    <button
+                        class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold"
+                        >POST JOB
+                    </button>
+                </a>
             </div>
         </div>
     </form>

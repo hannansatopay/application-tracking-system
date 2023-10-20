@@ -4,6 +4,23 @@
     function toggleMenu() {
         isMenuOpen = !isMenuOpen;
     }
+
+    // Define a function to handle the scroll
+    function scrollToContact(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        const contactSection = document.getElementById("contact");
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+    }
+
+    function scrollToAbout(event) {
+        event.preventDefault(); // Prevent the default link behavior
+        const contactSection = document.getElementById("about");
+        if (contactSection) {
+            contactSection.scrollIntoView({ behavior: "smooth" });
+        }
+    }
 </script>
 
 <div class="bg-blue-900">
@@ -47,7 +64,8 @@
                 </li>
                 <li>
                     <a
-                        href="/"
+                        href="#about"
+                        on:click={scrollToAbout}
                         aria-label="About Us"
                         title="About Us"
                         class="font-medium tracking-wide text-white transition-colors duration-200 hover:text-blue-400"
@@ -57,7 +75,7 @@
                 </li>
                 <li>
                     <a
-                        href="/"
+                        href="/jobs"
                         aria-label="Jobs"
                         title="Jobs"
                         class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-blue-400"
@@ -67,7 +85,8 @@
                 </li>
                 <li>
                     <a
-                        href="/"
+                        href="#contact"
+                        on:click={scrollToContact}
                         aria-label="Contact us"
                         title="Contact us"
                         class="font-medium tracking-wide text-gray-100 transition-colors duration-200 hover:text-blue-400"
@@ -89,7 +108,7 @@
                 </li>
                 <li>
                     <a
-                        href="/"
+                        href="/jobs"
                         class="inline-flex items-center justify-center h-12 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md text-white bg-blue-500 hover:bg-white hover:text-blue-800 hover:border-4 border-blue-600 focus:shadow-outline focus:outline-none"
                         aria-label="Applicant"
                         title="Applicant"
