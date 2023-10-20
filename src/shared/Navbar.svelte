@@ -13,8 +13,8 @@
         <div class="relative flex items-center justify-between">
             <a
                 href="/"
-                aria-label="ATS"
-                title="ATS"
+                aria-label="HireLogix"
+                title="HireLogix"
                 class="inline-flex items-center"
             >
                 <!-- <svg class="w-8 text-teal-accent-400" viewBox="0 0 24 24">
@@ -31,7 +31,7 @@
                 <span
                     class="ml-2 text-xl font-bold tracking-wide text-gray-100 uppercase"
                 >
-                    ATS
+                    HireLogix
                 </span>
             </a>
             <ul class="flex items-center hidden space-x-8 lg:flex">
