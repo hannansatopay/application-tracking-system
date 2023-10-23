@@ -47,7 +47,7 @@
                         }}
                     >
                         {#if form?.error}
-                            <Alert color="red">
+                            <Alert class="text-[#D80032]">
                                 {form.error}
                             </Alert>
                         {/if}
