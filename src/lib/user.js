@@ -58,33 +58,31 @@ export async function createUser(
   return { data: true };
 }
 
-export async function loginUser(email, password) {
+export async function loginUser(email_verified, password) {
   try {
-    const user = await db.organization.findUnique({
+    const user = await db.recruiter.findUnique({
       where: {
-        email,
+        email_verified,
       },
     });
 
     if (!user) {
-      return { error: "User not found" };
+      return { error: "Email not registered" };
     }
 
     const valid = await bcrypt.compare(password, user.password);
 
-    // const valid = true;
-
     if (!valid) {
-      return { error: "Invalid password" };
+      return { error: "Invalid credentials" };
     }
 
     // Update last_login in database
-    await db.organization.update({
+    await db.recruiter.update({
       where: {
-        email: email,
+        email_verified,
       },
       data: {
-        last_login: new Date(),
+        last_join: new Date(),
       },
     });
 
