@@ -1,8 +1,13 @@
 <script>
+    import { onMount } from 'svelte';
+    import { enhance } from '$app/forms';
+    import { Alert, Spinner } from "flowbite-svelte";
+    export let form;
+    let formLoading = false;
+    
     import Footer from "../../shared/Footer.svelte";
     import Navbar from "../../shared/Navbar.svelte";
-    let imageSrc =
-        "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600";
+    let imageSrc = "https://images.pexels.com/photos/3184418/pexels-photo-3184418.jpeg?auto=compress&cs=tinysrgb&w=600";
 </script>
 
 <!-- Navbar -->
@@ -30,107 +35,38 @@
                     <p>Enter your credentials to login</p>
                 </div>
                 <div>
-                    <!-- <div class="flex -mx-3">
-                        <div class="w-1/2 px-3 mb-5">
-                            <label for="" class="text-xs font-semibold px-1"
-                                >First name</label
-                            >
-                            <div class="flex">
-                                <div
-                                    class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
-                                >
-                                    <i
-                                        class="mdi mdi-account-outline text-gray-400 text-lg"
-                                    />
-                                </div>
-                                <input
-                                    type="text"
-                                    class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
-                                    placeholder="John"
-                                />
-                            </div>
+                    <form class="space-y-4 md:space-y-6" method="POST" use:enhance={() => {
+                        formLoading = true;
+                        return async ({ update }) => {
+                            await update({ reset: false });
+                            formLoading = false;
+                        };
+                    }}>
+                        {#if form?.error}
+                            <Alert color="red">
+                                {form.error}
+                            </Alert>
+                        {/if}
+                        <div>
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Email</label>
+                            <input type="email" name="email" id="email" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                         </div>
-                        <div class="w-1/2 px-3 mb-5">
-                            <label for="" class="text-xs font-semibold px-1"
-                                >Last name</label
-                            >
-                            <div class="flex">
-                                <div
-                                    class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
-                                >
-                                    <i
-                                        class="mdi mdi-account-outline text-gray-400 text-lg"
-                                    />
-                                </div>
-                                <input
-                                    type="text"
-                                    class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
-                                    placeholder="Smith"
-                                />
-                            </div>
-                        </div> -->
-                    <!-- </div> -->
-                    <div class="flex -mx-3">
-                        <div class="w-full px-3 mb-5">
-                            <label for="" class="text-xs font-semibold px-1"
-                                >Email</label
-                            >
-                            <div class="flex">
-                                <div
-                                    class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
-                                >
-                                    <i
-                                        class="mdi mdi-email-outline text-gray-400 text-lg"
-                                    />
-                                </div>
-                                <input
-                                    type="email"
-                                    class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
-                                    placeholder="johnsmith@example.com"
-                                />
-                            </div>
+                        <div>
+                            <label for="password" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Password</label>
+                            <input type="password" name="password" id="password" class="bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" required>
                         </div>
-                    </div>
-                    <div class="flex -mx-3">
-                        <div class="w-full px-3 mb-12">
-                            <label for="" class="text-xs font-semibold px-1"
-                                >Password</label
-                            >
-                            <div class="flex">
-                                <div
-                                    class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
-                                >
-                                    <i
-                                        class="mdi mdi-lock-outline text-gray-400 text-lg"
-                                    />
-                                </div>
-                                <input
-                                    type="password"
-                                    class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
-                                    placeholder="************"
-                                />
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex -mx-3">
-                        <div class="w-full px-3 mb-5">
-                            <a href="/jobpost">
-                                <button
-                                    class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold"
-                                    >LOGIN</button
-                                >
-                            </a>
-                        </div>
-                    </div>
-                    <p class="text-center text-sm text-gray-500">
-                        Not a member?{" "}
-                        <a
-                            href="/register"
-                            class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500"
-                        >
-                            Signup
-                        </a>
-                    </p>
+                        <button disabled={formLoading} type="submit" class="w-full text-white bg-primary-600 hover:bg-primary-700 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-primary-800">
+                            {#if formLoading}
+                                <Spinner size="5" color="white" />
+                            {:else}
+                                Sign in
+                            {/if}
+                        </button>
+                        <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+                            Don't have an account yet? <a href="/register" class="font-medium text-primary-600 hover:underline dark:text-primary-500">Sign up</a>
+                        </p>
+                        <!-- <a href="/forgot-password" class="text-sm font-medium text-primary-600 hover:underline dark:text-primary-500">Forgot password?</a> -->
+                    </form>
                 </div>
             </div>
         </div>
