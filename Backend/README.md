@@ -1,6 +1,6 @@
-# ATS-Backend
+# HireLogix-Backend
 
-ATS is a web application built with Node.js, Express, and MySQL, utilizing the Prisma ORM for database interactions. It serves as an Applicant Tracking System where recruiters can post jobs and job seekers can browse and apply for them.
+HireLogix is a web application built with Node.js, Express, and MySQL, utilizing the Prisma ORM for database interactions. It serves as an Applicant Tracking System where recruiters can post jobs and job seekers can browse and apply for them.
 
 ## API Demo
 Extensive documentation with examples [here](https://documenter.getpostman.com/view/21091542/2s9YR57uum)
