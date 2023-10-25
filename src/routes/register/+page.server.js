@@ -1,5 +1,9 @@
 import { redirect, fail } from "@sveltejs/kit";
 import { createUser } from "$lib/user.js";
+import { setAuthToken } from "$lib/helpers.js";
+import jwt from "jsonwebtoken";
+
+let JWT_ACCESS_SECRET = "tA7sSb#^aBxT1r0LDaCOwasNF8MeVtcTb@HrnxiEJ5UVy!6v%o";
 
 export function load({ cookies }) {
   const token = cookies.get("AuthorizationToken");
@@ -33,7 +37,7 @@ export const actions = {
       return fail(401, { error: `Missing ${emptyFields.join(", ")}` });
     }
 
-    const { error, data } = await createUser(
+    const { error, token } = await createUser(
       first_name,
       last_name,
       password,
@@ -46,6 +50,9 @@ export const actions = {
       return fail(401, { error });
     }
 
-    throw redirect(302, "/login");
+    setAuthToken({ cookies, token });
+    const jwtUser = jwt.verify(token, JWT_ACCESS_SECRET);
+    throw redirect(302, "/jobpost");
+
   },
 };

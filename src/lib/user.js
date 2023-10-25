@@ -5,7 +5,7 @@ import jwt from "jsonwebtoken";
 let JWT_ACCESS_SECRET = "tA7sSb#^aBxT1r0LDaCOwasNF8MeVtcTb@HrnxiEJ5UVy!6v%o";
 
 function createJWT(user) {
-  return jwt.sign({ id: user.id, email: user.email }, JWT_ACCESS_SECRET, {
+  return jwt.sign({ id: user.org_id, email: user.email_verified }, JWT_ACCESS_SECRET, {
     expiresIn: "1d",
   });
 }
@@ -44,18 +44,24 @@ export async function createUser(
     return { error: `Email already exists` };
   }
 
-  await db.recruiter.create({
-    data: {
-      first_name,
-      last_name,
-      email_verified,
-      password: hashedPassword,
-      user_agent,
-      user_ip,
-    },
-  });
+  try {
+    const registeredRecuriter = await db.recruiter.create({
+      data: {
+        first_name,
+        last_name,
+        email_verified,
+        password: hashedPassword,
+        user_agent,
+        user_ip,
+      },
+    });
 
-  return { data: true };
+    const token = createJWT(registeredRecuriter);
+    return { token };
+  } catch (error) {
+    console.log(error);
+    return { error };
+  }
 }
 
 export async function loginUser(email_verified, password) {

@@ -28,6 +28,6 @@ export const actions = {
 
         const jwtUser = jwt.verify(token, JWT_ACCESS_SECRET);
 
-        throw redirect(302, "/")
+        throw redirect(302, "/jobpost")
 	}
 };
