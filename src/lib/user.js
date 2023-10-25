@@ -5,6 +5,7 @@ import jwt from "jsonwebtoken";
 let JWT_ACCESS_SECRET = "tA7sSb#^aBxT1r0LDaCOwasNF8MeVtcTb@HrnxiEJ5UVy!6v%o";
 
 function createJWT(user) {
+
   return jwt.sign({ id: user.org_id, email: user.email_verified }, JWT_ACCESS_SECRET, {
     expiresIn: "1d",
   });
