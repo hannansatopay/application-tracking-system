@@ -73,7 +73,7 @@
         </div>
 
         <div class="px-10 py-5 bg-gray-300 w-3/4 rounded-3xl mr-2 my-4">
-            <div class="text-3xl mb-4 text-center">JOBS POSTED</div>
+            <div class="text-3xl mb-4 text-center font-bold">JOBS POSTED</div>
             <div
                 class="grid gap-6 row-gap-5 mb-8 lg:grid-cols-3 sm:row-gap-3 sm:grid-cols-2"
             >
