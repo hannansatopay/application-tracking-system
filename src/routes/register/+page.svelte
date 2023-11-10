@@ -30,7 +30,7 @@
             />
             <!-- </div> -->
             <div class="w-full md:w-1/2 py-10 px-5 md:px-10">
-                <div class="text-center mb-10">
+                <div class="text-center mb-5">
                     <h1 class="font-bold text-3xl text-gray-900">SIGN UP</h1>
                     <p>Enter your credentials to sign up</p>
                 </div>
@@ -52,7 +52,7 @@
                             </Alert>
                         {/if}
                         <div class="flex -mx-3">
-                            <div class="w-1/2 px-3 mb-5">
+                            <div class="w-1/2 px-3">
                                 <label for="" class="text-xs font-semibold px-1"
                                     >First name</label
                                 >
@@ -72,7 +72,7 @@
                                     />
                                 </div>
                             </div>
-                            <div class="w-1/2 px-3 mb-5">
+                            <div class="w-1/2 px-3">
                                 <label for="" class="text-xs font-semibold px-1"
                                     >Last name</label
                                 >
@@ -94,7 +94,7 @@
                             </div>
                         </div>
                         <div class="flex -mx-3">
-                            <div class="w-full px-3 mb-5">
+                            <div class="w-full px-3">
                                 <label for="" class="text-xs font-semibold px-1"
                                     >Email</label
                                 >
@@ -116,7 +116,7 @@
                             </div>
                         </div>
                         <div class="flex -mx-3">
-                            <div class="w-full px-3 mb-12">
+                            <div class="w-full px-3">
                                 <label for="" class="text-xs font-semibold px-1"
                                     >Password</label
                                 >
@@ -138,7 +138,7 @@
                             </div>
                         </div>
                         <div class="flex -mx-3">
-                            <div class="w-full px-3 mb-5">
+                            <div class="w-full px-3">
                                 <button
                                     type="submit"
                                     class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold"
