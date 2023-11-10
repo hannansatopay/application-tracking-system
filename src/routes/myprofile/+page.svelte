@@ -68,7 +68,7 @@
                 </div>
             </div>
             <div>
-                <p>I am recuriting fot the SDE role.</p>
+                <p>I am recuriting for the SDE role.</p>
             </div>
         </div>
 
