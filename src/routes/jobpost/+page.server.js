@@ -29,7 +29,7 @@ export const actions = {
     }
 
     const token = cookies.get("AuthorizationToken");
-    const { id } = parseToken(token.split(" ")[1]);
+    const { id } = parseToken(token);
     const { error, data } = await createJob(
       title,
       job_type,
