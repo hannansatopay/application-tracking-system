@@ -16,9 +16,9 @@ export function load({ cookies }) {
 export const actions = {
 	default: async ({ cookies, request }) => {
         const formData = Object.fromEntries(await request.formData());
-        const { email, password } = formData;
+        const { email_verified, password } = formData;
 
-        const { error, token } = await loginUser(email, password);
+        const { error, token } = await loginUser(email_verified, password);
 
         if (error) {
             return fail(401, {error});
@@ -26,8 +26,6 @@ export const actions = {
 
         setAuthToken({cookies, token});
 
-        const jwtUser = jwt.verify(token, JWT_ACCESS_SECRET);
-
-        throw redirect(302, "/jobpost")
+        throw redirect(302, "/myprofile")
 	}
 };

@@ -5,10 +5,13 @@ import jwt from "jsonwebtoken";
 let JWT_ACCESS_SECRET = "tA7sSb#^aBxT1r0LDaCOwasNF8MeVtcTb@HrnxiEJ5UVy!6v%o";
 
 function createJWT(user) {
-
-  return jwt.sign({ id: user.org_id, email: user.email_verified }, JWT_ACCESS_SECRET, {
-    expiresIn: "1d",
-  });
+  return jwt.sign(
+    { id: user.org_id, email: user.email_verified },
+    JWT_ACCESS_SECRET,
+    {
+      expiresIn: "1d",
+    }
+  );
 }
 
 export async function createUser(
@@ -96,6 +99,36 @@ export async function loginUser(email_verified, password) {
     const token = createJWT(user);
 
     return { token };
+  } catch (error) {
+    console.log(error);
+    return error;
+  }
+}
+
+export async function getRecruiter(email_verified, org_id) {
+  try {
+    const recruiter = await db.recruiter.findFirst({
+      where: {
+        email_verified,
+        org_id,
+      },
+      select: {
+        first_name: true,
+        last_name: true,
+
+        jobs: {
+          select: {
+            title: true,
+            job_type: true,
+            end_date: true,
+            stipend: true,
+            no_of_openinigs: true,
+            description: true,
+          },
+        },
+      },
+    });
+    return JSON.stringify(recruiter);
   } catch (error) {
     console.log(error);
     return error;

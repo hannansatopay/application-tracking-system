@@ -13,6 +13,6 @@ export const setAuthToken = ({ cookies, token }) => {
 };
 
 export const parseToken = (token) => {
-  const { id, email } = jwt.verify(token, JWT_ACCESS_SECRET);
+  const { id, email } = jwt.verify(token.split(" ")[1], JWT_ACCESS_SECRET);
   return { id, email };
 };
