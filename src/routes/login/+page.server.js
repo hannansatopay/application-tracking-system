@@ -26,6 +26,6 @@ export const actions = {
 
         setAuthToken({cookies, token});
 
-        throw redirect(302, "/jobpost")
+        throw redirect(302, "/myprofile")
 	}
 };
