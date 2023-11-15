@@ -3,7 +3,6 @@
     import Navbar from "../../shared/Navbar.svelte";
     //   let imageSrc ="https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2";
     export let data;
-
     //   let myjobs = [
     //     {
     //       title: "SDE",
@@ -122,7 +121,7 @@
                                 <p>Questions..</p>
                             </div>
                             <a
-                                href="/applicants"
+                                href={`/applicants/${job.job_id}`}
                                 class="inline-flex items-center justify-center mx-auto h-12 px-6 font-medium tracking-wide transition duration-200 rounded shadow-md text-white bg-blue-900 hover:bg-white hover:text-blue-900 hover:border-4 border-blue-900 focus:shadow-outline focus:outline-none"
                                 aria-label="Applicants"
                                 title="Applicants"
