@@ -32,3 +32,12 @@ export async function applyJob(
     return error;
   }
 }
+
+export async function getApplicants(job_id) {
+  const jobseekers = await db.jobseeker.findMany({
+    where: {
+      job_id,
+    },
+  });
+  return JSON.stringify(jobseekers)
+}

@@ -101,9 +101,9 @@
             <input
               id="phone"
               type="tel"
+              name="phone_number"
               class="text-gray-600 w-full pl-4 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
               placeholder="Enter your phone number"
-              pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
             />
            
           </div>

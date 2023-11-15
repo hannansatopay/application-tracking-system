@@ -124,6 +124,7 @@ export async function getRecruiter(email_verified, org_id) {
             stipend: true,
             no_of_openinigs: true,
             description: true,
+            job_id:true            
           },
         },
       },
