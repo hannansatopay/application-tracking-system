@@ -52,6 +52,6 @@ export const actions = {
 
     setAuthToken({ cookies, token });
     const jwtUser = jwt.verify(token, JWT_ACCESS_SECRET);
-    throw redirect(302, "/jobpost");
+    throw redirect(302, "/myprofile");
   },
 };
